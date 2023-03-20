@@ -1,0 +1,60 @@
+% 默认页面大小 4:3
+\documentclass[10pt]{ctexbeamer}
+% 页面大小 16:10
+% \documentclass[10pt, aspectratio=1610]{ctexbeamer}
+% 页面大小 16:9
+% \documentclass[10pt, aspectratio=169]{ctexbeamer}
+% 页面大小 14:9
+% \documentclass[10pt, aspectratio=149]{ctexbeamer}
+% 页面大小 1.41:1
+% \documentclass[10pt, aspectratio=141]{ctexbeamer}
+% 页面大小 5:4
+% \documentclass[10pt, aspectratio=54]{ctexbeamer}
+% 页面大小 3:2
+% \documentclass[10pt, aspectratio=32]{ctexbeamer}
+
+\usetheme[logo=UCAS, sublogo=TRUSC]{ucas}
+% logo 的选项: CAS, UCAS
+% sublogo 的选项: AMSS, AMSS2018, UCAS, TRUSC
+
+% 引入参考文献列表的 .bib 文件, 使用 GB/T 7714-2015 的文献著录规则.
+\usepackage[backend=biber, style=gb7714-2015]{biblatex}
+\addbibresource{ref.bib}
+\usepackage{multicol}
+\title[UCAS Beamer (\LaTeX{})]{***报告}
+% \subtitle[非官方]{带噪声的社交网络对齐}
+\author[G.\,Chen]{\href{mailto:icgw@outlook.com}{
+% 王力 2022E8013282167 \\
+王子旭 202228013229109}}
+\institute[AMSS, CAS]{中国科学院计算技术研究所 \\ 数据智能系统研究中心}
+\date[\today]{\today, 中国北京}
+\subject{展示主题}
+% \keywords{图数据挖掘，异常检测，回顾与总结}
+
+\begin{document}
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
+\begin{frame}[plain]
+  \maketitle
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{目录}
+  \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
+\end{frame}
+
+\section[第一章]{一、***}\label{sec:1}
+\begin{frame}
+    \textbf{\LARGE 一、***}
+\end{frame}
+\subsection{1.1 ***}\label{subsec:1-1}
+\begin{frame}
+    \frametitle{***}
+\end{frame}
+
+\end{document}
